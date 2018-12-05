@@ -16,7 +16,6 @@
     "test:type-check:full": "flow check",
     "test:type-check": "flow status",
     "test:type-check-threshold": "flow-coverage-report report --config flow-coverage-config.json",
-     "heroku-postbuild": "yarn build"
   },
   "keywords": [
     "react"
