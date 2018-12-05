@@ -1,7 +1,7 @@
 var path = require('path')
 var webpack = require('webpack')
 const BabelFlowWebpackPlugin = require('babel-flow-webpack-plugin')
-var devServerPort = 4000
+var devServerPort = process.env.PORT || 4000
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const styleVars = require('./style-vars.js')
@@ -105,7 +105,7 @@ module.exports = {
             "process.env": {
                 BROWSER: true,
                 NODE_ENV: JSON.stringify("development"),
-                PUBLIC_URL: JSON.stringify('http://localhost:4000/Lil-Data/'),
+                PUBLIC_URL: JSON.stringify('http://localhost:'+devServerPort'/Lil-Data/'),
             },
         }),
         new ExtractTextPlugin({filename: '[name].[hash].css', allChunks: true}),

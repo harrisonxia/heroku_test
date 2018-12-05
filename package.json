@@ -10,7 +10,7 @@
   "scripts": {
     "test": "jest  --config=./config/jest.config.js",
     "build": "rm -rf ../docs/* && webpack -p --config ./utils/prod-config.js",
-    "start": "webpack-dev-server --hot --inline --config ./utils/dev-config.js",
+    "start": "webpack-dev-server --hot --inline --config ./utils/dev-config.js  --port $PORT --host 0.0.0.0",
     "flow": "flow",
     "flow-typed:install": "flow-typed install",
     "test:type-check:full": "flow check",
