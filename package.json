@@ -9,13 +9,13 @@
   },
   "scripts": {
     "test": "jest  --config=./config/jest.config.js",
-    "build": "rm -rf ../docs/* && webpack -p --config ./utils/prod-config.js",
-    "start": "webpack-dev-server --hot --inline --config ./utils/dev-config.js  --port $PORT --host 0.0.0.0",
+    "start": "webpack-dev-server --hot --inline --config ./utils/dev-config.js  --port $PORT --host 0.0.0.0",    "start": "webpack-dev-server --hot --inline --config ./utils/dev-config.js",
     "flow": "flow",
     "flow-typed:install": "flow-typed install",
     "test:type-check:full": "flow check",
     "test:type-check": "flow status",
-    "test:type-check-threshold": "flow-coverage-report report --config flow-coverage-config.json"
+    "test:type-check-threshold": "flow-coverage-report report --config flow-coverage-config.json",
+    "heroku-postbuild": "yarn build"
   },
   "keywords": [
     "react"
