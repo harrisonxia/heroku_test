@@ -15,7 +15,7 @@
     "flow-typed:install": "flow-typed install",
     "test:type-check:full": "flow check",
     "test:type-check": "flow status",
-    "test:type-check-threshold": "flow-coverage-report report --config flow-coverage-config.json",
+    "test:type-check-threshold": "flow-coverage-report report --config flow-coverage-config.json"
   },
   "keywords": [
     "react"
