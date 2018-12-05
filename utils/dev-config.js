@@ -131,7 +131,9 @@ module.exports = {
             }
         },
         inline: true,
-        historyApiFallback: true
+        historyApiFallback: true,
+        compress: true,
+        disableHostCheck: true,   // That solved it
     }
 
 }
