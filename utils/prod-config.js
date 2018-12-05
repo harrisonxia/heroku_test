@@ -1,6 +1,6 @@
 var path = require('path');
 var webpack = require('webpack');
-var CopyWebpackPlugin = require('copy-webpack-plugin');
+// var CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
@@ -32,9 +32,9 @@ module.exports = {
       filename: './index.html',
       inject: true,
     }),
-    new CopyWebpackPlugin([
-      {from: 'assets/img', to: 'assets/img'},
-      {from: './favicon.ico', to: './favicon.ico'}
-    ]),
+    // new CopyWebpackPlugin([
+    //   {from: 'assets/img', to: 'assets/img'},
+    //   {from: './favicon.ico', to: './favicon.ico'}
+    // ]),
   ]
 };

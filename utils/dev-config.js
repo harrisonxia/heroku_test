@@ -10,7 +10,7 @@ const autoprefixer = require('autoprefixer')
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin')
 const customPropertiesPlugin = customProperties()
 customPropertiesPlugin.setVariables(styleVars)
-var CopyWebpackPlugin = require('copy-webpack-plugin')
+// var CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = {
     context: path.resolve(__dirname, '..', 'src'),
@@ -116,9 +116,9 @@ module.exports = {
         }),
         new SpriteLoaderPlugin(),
         new BabelFlowWebpackPlugin(),
-        new CopyWebpackPlugin([
-            {from:'assets/img',to:'assets/img'}
-        ]),
+        // new CopyWebpackPlugin([
+        //     {from:'assets/img',to:'assets/img'}
+        // ]),
     ],
     devtool: 'inline-source-map',
     devServer: {
